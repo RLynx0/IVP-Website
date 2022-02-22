@@ -64,6 +64,7 @@
             <ul>
                 <!-- <li><a href="#About"><button>Über uns</button></a></li> -->
                 <li><a href="#Satzung"><button>Satzung</button></a></li>
+                <li><a href="#Info"><button>Info</button></a></li>
                 <!-- <li><a href="#Kontakt"><button>Kontakt</button></a></li> -->
                 <!-- <li><a href="#Spende"><button>Spenden</button></a></li> -->
                 <li><a href="#Dokumente"><button>Dokumente</button></a></li>
@@ -85,6 +86,19 @@
                         <h3>Zum Satzungstext</h3>
                     </a>
                 </div>
+            </section>
+            <section id="info">
+                <a id="Info"></a>
+                <h2>Info</h2>
+                <h3>Diese Website ist noch nicht fertig!</h3>
+                <p>
+                    Bei Fragen kontaktiere uns bitte unter
+                    <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>
+                    oder
+                    <a href="mailto:info@ikvp.at">
+                        info@ikvp.at
+                    </a>!
+                </p>
             </section>
             <!-- <section id="contact">
                 <a id="Kontakt"></a>
