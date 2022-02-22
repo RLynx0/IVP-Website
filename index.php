@@ -64,7 +64,7 @@
             <ul>
                 <!-- <li><a href="#About"><button>Über uns</button></a></li> -->
                 <li><a href="#Satzung"><button>Satzung</button></a></li>
-                <li><a href="#Kontakt"><button>Kontakt</button></a></li>
+                <!-- <li><a href="#Kontakt"><button>Kontakt</button></a></li> -->
                 <!-- <li><a href="#Spende"><button>Spenden</button></a></li> -->
                 <li><a href="#Dokumente"><button>Dokumente</button></a></li>
             </ul>
@@ -86,7 +86,7 @@
                     </a>
                 </div>
             </section>
-            <section id="contact">
+            <!-- <section id="contact">
                 <a id="Kontakt"></a>
                 <h2>Kontakt</h2>
                 <h3>Schicken Sie uns eine Email!</h3>
@@ -102,13 +102,13 @@
                         </a>
                     </li>
                 </ul>
-                <!-- <br>
+                <br>
                 <h3>Oder hinterlasse direkt eine Nachricht!</h3>
                 <form onsubmit="return false;">
                     <textarea cols="30" rows="10"></textarea>
                     <button>Senden</button>
-                </form> -->
-            </section>
+                </form>
+            </section> -->
             <!-- <section id="donations">
                 <a id="Spende"></a>
                 <h2>Spende</h2>
