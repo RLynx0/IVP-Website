@@ -1,0 +1,324 @@
+:root {
+  background-color: #262422;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+  box-sizing: border-box;
+  position: fixed;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  place-items: center;
+  justify-content: flex-end;
+}
+nav #mediaLinks {
+  display: grid;
+  width: min-content;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #26242266;
+  border-bottom-left-radius: 2rem;
+}
+nav #mediaLinks a {
+  transition: transform 200ms ease-in-out;
+}
+nav #mediaLinks a:hover {
+  transform: scale(1.2);
+}
+nav #mediaLinks a:active {
+  transform: scale(1.1);
+}
+nav #mediaLinks a * {
+  fill: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+nav #mediaLinks a:hover * {
+  fill: #f80;
+}
+nav #mediaLinks a:active * {
+  fill: #f40;
+}
+
+footer {
+  height: 150px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  background-color: #666;
+
+  font-size: larger;
+}
+
+h1 {
+  text-align: center;
+  height: min-content;
+  font-size: 6rem;
+  font-weight: bolder;
+}
+h2 {
+  text-align: left;
+  height: min-content;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0px;
+  padding: 2rem 0px;
+}
+
+a,
+.linkBlock button {
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-decoration: underline;
+}
+a:hover,
+a:focus-visible,
+.linkBlock button:hover,
+.linkBlock button:focus-visible {
+  cursor: pointer;
+  color: #f80;
+}
+a:active,
+.linkBlock button:active {
+  color: #f40;
+}
+
+#title {
+  height: 65vh;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  background-image: url(https://wallpaperaccess.com/full/310116.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f80;
+}
+
+#wrapper {
+  display: flex;
+}
+#topScrWrapper {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  height: 100vh;
+}
+#contents {
+  flex: 1;
+  min-width: min-content;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  height: 100vh;
+}
+
+#contents ul {
+  background-color: #444;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  height: 100%;
+  overflow-y: auto;
+}
+#contents li {
+  position: relative;
+}
+#contents li::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 100%;
+  right: 0px;
+}
+#contents li.current::after {
+  background-color: #f80;
+}
+#contents li.current:active::after {
+  background-color: #f40;
+}
+#contents button {
+  width: 100%;
+  height: 4rem;
+  padding: 0px 2rem 0px;
+  border: none;
+  background-color: inherit;
+
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #fff;
+}
+#contents button:hover,
+#contents button:focus-visible {
+  cursor: pointer;
+  background-color: #666;
+  color: #f80;
+}
+#contents button:active {
+  background-color: #555;
+  color: #f40;
+}
+
+#topScroller {
+  position: absolute;
+  bottom: 3rem;
+  right: 1.5rem;
+
+  background-color: #444;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+
+  display: flex;
+  place-items: center;
+  place-content: center;
+
+  transition: transform 200ms ease-in-out;
+}
+#topScroller:hover,
+#topScroller:focus-visible {
+  background-color: #666;
+  transform: scale(1.2);
+}
+#topScroller:active {
+  background-color: #555;
+  transform: scale(1.1);
+}
+#topScroller i {
+  font-weight: bolder;
+  color: #fff;
+  font-size: 1.5rem;
+}
+#topScroller:hover i,
+#topScroller:focus-visible i {
+  color: #f80;
+}
+#topScroller:active i {
+  color: #f40;
+}
+
+#site {
+  flex: 4;
+  padding: 0px;
+}
+#site > section {
+  margin: 0px;
+  padding: 0.5rem 6rem 4rem 2rem;
+}
+#site > :last-child {
+  min-height: 100vh;
+}
+
+#satzungFlex {
+  padding-top: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+}
+#satzungFlex a {
+  display: flex;
+  flex-flow: column;
+  width: max-content;
+  place-items: center;
+  text-align: center;
+}
+
+#contact li {
+  width: max-content;
+  transition: transform 200ms ease-in-out;
+}
+#contact li:hover {
+  --scaleBy: 1.5;
+  transform: scale(var(--scaleBy))
+    translateX(
+      calc(100% * calc(calc(var(--scaleBy) - 1) / calc(2 * var(--scaleBy))))
+    );
+}
+
+.linkBlock {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: flex-start;
+  justify-items: center;
+  grid-gap: 2rem;
+}
+.linkBlock a,
+.linkBlock button {
+  display: flex;
+  flex-flow: column;
+  width: min-content;
+  place-items: center;
+  text-align: center;
+}
+.linkBlock h3,
+#satzungFlex h3 {
+  font-size: 1.8rem;
+}
+.linkBlock a img,
+.linkBlock button img,
+#satzungFlex a img {
+  border-radius: 0.5rem;
+  transition: transform 200ms ease-in-out;
+}
+.linkBlock a:hover img,
+.linkBlock button:hover img,
+#satzungFlex a:hover img,
+.linkBlock a:focus-visible img,
+.linkBlock button:focus-visible img,
+#satzungFlex a:focus-visible img {
+  transform: scale(1.2);
+}
+.linkBlock a:active img,
+.linkBlock button:active img,
+#satzungFlex a:active img {
+  transform: scale(1.1);
+}
+.linkBlock .hide {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #contents {
+    display: none;
+  }
+  #topScrWrapper {
+    display: none;
+  }
+  #site > section {
+    padding-right: 2rem;
+  }
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .linkBlock h3 {
+    font-size: 1.5rem;
+  }
+}
