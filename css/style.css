@@ -61,8 +61,12 @@ footer {
   place-items: center;
 
   background-color: #666;
+  padding: 1rem;
 
   font-size: larger;
+}
+footer * {
+  padding: 0.5rem 1rem;
 }
 
 h1 {
@@ -310,6 +314,9 @@ a:active,
   h1,
   h2 {
     font-size: 3rem;
+  }
+  footer {
+    flex-flow: column;
   }
 }
 @media (max-width: 400px) {
