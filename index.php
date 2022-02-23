@@ -93,11 +93,7 @@
                 <h3>Diese Website ist noch nicht fertig!</h3>
                 <p>
                     Bei Fragen kontaktiere uns bitte unter
-                    <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>
-                    oder
-                    <a href="mailto:info@ikvp.at">
-                        info@ikvp.at
-                    </a>!
+                    <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>!
                 </p>
             </section>
             <!-- <section id="contact">
