@@ -136,9 +136,6 @@
                     {
                         $prevs = scandir($prevsPath);
                         $documents = scandir($filePath);
-                        if ($key = array_search(".gitkeep", $documents)) {
-                            unset($documents[$key]);
-                        }
 
                         if (count($documents) <= 2) {
                             if ($isSub) {
