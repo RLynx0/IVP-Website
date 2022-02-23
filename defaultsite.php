@@ -134,6 +134,11 @@
                     <?php
                     function listFiles($filePath, $prevsPath, $isSub)
                     {
+                        if (!is_dir($filePath)) {
+                            print "<p>Derzeit keine Dokumente verfügbar</p>";
+                            return;
+                        }
+
                         $prevs = scandir($prevsPath);
                         $documents = scandir($filePath);
 
