@@ -142,16 +142,6 @@
                         $prevs = scandir($prevsPath);
                         $documents = scandir($filePath);
 
-                        if (count($documents) <= 2) {
-                            if ($isSub) {
-                                print "<p href='" . $filePath . "/noCont' class='hide'>";
-                                print "Keine Dokumente in Ordner</p>";
-                            } else {
-                                print "<p>Derzeit keine Dokumente verfügbar</p>";
-                            }
-                            return;
-                        };
-
                         for ($i = 2; $i < count($documents); $i++) {
                             $path = $documents[$i];
 
