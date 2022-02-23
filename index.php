@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interkommunale Volkspartei</title>
-    <meta name="description" content="Vom Volk, fürs Volk">
+    <meta name="description" content="🧡Vom Volk, fürs Volk🧡">
     <meta name="keywords" content="Interkommunale, Volkspartei, Partei, Österreich, IVP, IKVP, Volk">
     <meta name="author" content="IVP Österreich">
     <script src="./scripts/mainScript.js?v=<?php echo time(); ?>" defer></script>
