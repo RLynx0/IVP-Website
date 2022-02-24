@@ -15,42 +15,113 @@ body {
   height: 100%;
 }
 
-nav {
-  box-sizing: border-box;
+#menuBtn {
+  display: none;
   position: fixed;
-  height: 3rem;
-  width: 100%;
-  display: flex;
+  top: 0px;
+  right: 0px;
+
+  padding: 0px;
+  place-content: center;
   place-items: center;
-  justify-content: flex-end;
+
+  height: 3rem;
+  width: 3rem;
+  background-color: #26242266;
+  border: none;
+
+  border-bottom-left-radius: 1rem;
+  transition-property: border-radius, background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
-nav #mediaLinks {
-  display: grid;
+#menuBtn.focusActive {
+  background-color: #444;
+  border-bottom-left-radius: 0px;
+}
+#menuBtn #burgerMenuIcon {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  place-content: center;
+  width: 50%;
+  height: 40%;
+  transition: transform 200ms ease-in-out;
+}
+#menuBtn #burgerMenuIcon * {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  transition: transform 500ms cubic-bezier(0.5, -0.5, 0.2, 1);
+}
+#menuBtn #burgerMenu0 {
+  transform: translateY(-200%);
+}
+#menuBtn #burgerMenu2 {
+  transform: translateY(200%);
+}
+#menuBtn.focusActive #burgerMenu0 {
+  transform: translateY(0%) rotate(225deg);
+}
+#menuBtn.focusActive #burgerMenu1 {
+  transform: translateY(0%) rotate(405deg);
+}
+#menuBtn.focusActive #burgerMenu2 {
+  transform: translateY(0%) rotate(135deg);
+}
+#menuBtn:hover {
+  cursor: pointer;
+}
+#menuBtn:hover #burgerMenuIcon,
+#menuBtn:focus-visible #burgerMenuIcon {
+  transform: scale(1.2);
+}
+#menuBtn:hover #burgerMenuIcon *,
+#menuBtn:focus-visible #burgerMenuIcon * {
+  background-color: #f80;
+}
+#menuBtn:active #burgerMenuIcon * {
+  background-color: #f40;
+}
+
+#mediaLinks {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  box-sizing: border-box;
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
   width: min-content;
-  grid-template-columns: repeat(2, 1fr);
+  height: 3rem;
+
   gap: 1rem;
   padding: 1rem;
   background-color: #26242266;
   border-bottom-left-radius: 2rem;
 }
-nav #mediaLinks a {
+#mediaLinks a {
   transition: transform 200ms ease-in-out;
 }
-nav #mediaLinks a:hover {
+#mediaLinks a:hover {
   transform: scale(1.2);
 }
-nav #mediaLinks a:active {
+#mediaLinks a:active {
   transform: scale(1.1);
 }
-nav #mediaLinks a * {
+#mediaLinks a * {
   fill: #fff;
   width: 1.5rem;
   height: 1.5rem;
 }
-nav #mediaLinks a:hover * {
+#mediaLinks a:hover * {
   fill: #f80;
 }
-nav #mediaLinks a:active * {
+#mediaLinks a:active * {
   fill: #f40;
 }
 
@@ -104,6 +175,10 @@ a:active,
   color: #f40;
 }
 
+.hide {
+  display: none;
+}
+
 #title {
   min-height: 30vh;
   height: min-content;
@@ -127,17 +202,21 @@ a:active,
   top: 0px;
   height: 100vh;
 }
-#contents {
+
+#menu {
   flex: 1;
+}
+
+#contents {
   min-width: min-content;
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
   height: 100vh;
+  background-color: #444;
 }
 
 #contents ul {
-  background-color: #444;
   padding: 0px;
   margin: 0px;
   list-style: none;
@@ -298,14 +377,50 @@ a:active,
 #satzungFlex a:active img {
   transform: scale(1.1);
 }
-.linkBlock .hide {
-  display: none;
-}
 
 @media (max-width: 800px) {
-  #contents {
+  .condOffscreen {
+    transform: translateX(100%);
+  }
+  .condHide {
     display: none;
   }
+
+  #menuBtn {
+    display: flex;
+  }
+
+  #menu {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+
+    top: 3rem;
+    right: 0px;
+    width: 15rem;
+    border-radius: 1rem 0px 0px 1rem;
+    background-color: #444;
+    overflow: hidden;
+
+    transition: transform 200ms ease-in-out;
+  }
+
+  #mediaLinks {
+    position: static;
+    background-color: inherit;
+    height: 5rem;
+    width: 100%;
+  }
+  #contents {
+    height: min-content;
+    width: 100%;
+  }
+  #contents li::after {
+    right: unset;
+    left: 0px;
+  }
+
   #topScrWrapper {
     display: none;
   }
@@ -318,6 +433,9 @@ a:active,
   }
   footer {
     flex-flow: column;
+  }
+  #wrapper {
+    display: block;
   }
 }
 @media (max-width: 400px) {

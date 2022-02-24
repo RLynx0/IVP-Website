@@ -62,5 +62,36 @@ function updateContentsCurrent() {
   }
 }
 
+function conditionalSmoothToggle(element, time, minwidth) {
+  if (window.innerWidth > minwidth) return;
+
+  if (element.classList.contains("condHide")) {
+    element.classList.remove("condHide");
+    setTimeout(() => {
+      element.classList.remove("condOffscreen");
+    }, 0);
+    return;
+  }
+
+  element.classList.add("condOffscreen");
+  setTimeout(() => {
+    element.classList.add("condHide");
+  }, time);
+}
+
+function conditionalClearFocus(event) {
+  if (
+    event.target.matches(".keepFocus") ||
+    event.target.matches(".keepFocus *")
+  )
+    return;
+
+  const actives = document.querySelectorAll(".focusActive");
+  for (let i = 0; i < actives.length; i++) {
+    actives[i].click();
+  }
+}
+
 window.onscroll = updateContentsCurrent;
+window.onclick = conditionalClearFocus;
 updateContentsCurrent();
