@@ -399,9 +399,10 @@ a:active,
     top: 3rem;
     right: 0px;
     width: 15rem;
+    max-height: calc(100vh - 3.5rem);
     border-radius: 1rem 0px 0px 1rem;
     background-color: #444;
-    overflow: hidden;
+    overflow: auto;
 
     transition: transform 200ms ease-in-out;
   }
