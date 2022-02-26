@@ -71,7 +71,7 @@
             </div>
             <div id="contents">
                 <ul>
-                    <!-- <li><a href="#About"><button>Über uns</button></a></li> -->
+                    <li><a href="#About"><button>Über uns</button></a></li>
                     <!-- <li><a href="#Kontakt"><button>Kontakt</button></a></li> -->
                     <li><a href="#Satzung"><button>Satzung</button></a></li>
                     <li><a href="#Info"><button>Info</button></a></li>
@@ -81,12 +81,12 @@
             </div>
         </div>
         <div id="site">
-            <!-- <section id="about">
+            <section id="about">
                 <a id="About"></a>
                 <h2>Über uns</h2>
                 <p>
                 </p>
-            </section> -->
+            </section>
             <section id="satzung">
                 <a id="Satzung"></a>
                 <h2>Satzung</h2>
@@ -102,7 +102,6 @@
                 <h2>Info</h2>
                 <h3>Diese Website ist noch nicht fertig!</h3>
                 <p>
-                    Test123
                     Bei Fragen kontaktiere uns bitte unter
                     <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>!
                 </p>
