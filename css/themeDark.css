@@ -100,21 +100,6 @@ a:active,
   color: #f40;
 }
 
-#about li {
-  position: relative;
-  list-style: none;
-}
-li::before {
-  position: absolute;
-  left: -1.5em;
-  content: "";
-  height: 1em;
-  width: 1em;
-  background-image: url(../img/listStyles/aboutUL.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 @media (max-width: 800px) {
   #mediaLinks {
     background-color: inherit;

@@ -86,7 +86,7 @@
                 <a id="About"></a>
                 <h2>Über uns</h2>
                 <p>
-                <ul>
+                <ul class="IVPArrowList">
                     <li> Die Interkommunale Volkspartei ist ein Zusammenschluss von Bürger*innen, die Bürger*innen unterstützen, sie anhören und ihre Interessen vertreten. </li>
                     <li> Wir wollen dem Volk wieder Macht versprechen. Politische Parteien dürfen nicht so viel Einfluss besitzen, wie sie ihn jetzt gerade unbestraft ausleben. </li>
                     <li> Die Interkommunale Volkspartei einen Zusammenschluss aus dem Volk, der durch unsere Ursprünge unmittelbar aus der Menge der Schüler*innen, Arbeiter*innen und den Pensionist*innen kommt, der seine Werte, sein Erreichtes und seine Arbeit dem Volk zurückgibt. </li>

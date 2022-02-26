@@ -248,6 +248,24 @@ a:focus-visible,
   min-height: 100vh;
 }
 
+.IVPArrowList {
+  list-style: none;
+  padding-left: 2rem;
+}
+.IVPArrowList li {
+  position: relative;
+}
+.IVPArrowList li::before {
+  position: absolute;
+  left: -1.5em;
+  content: "";
+  height: 1em;
+  width: 1em;
+  background-image: url(../img/listStyles/aboutUL.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 #about li {
   padding-bottom: 0.6em;
 }
