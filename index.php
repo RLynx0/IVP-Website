@@ -84,12 +84,12 @@
             <section id="about">
                 <a id="About"></a>
                 <h2>Über uns</h2>
-                <p>
-                    Die Interkommunale Volkspartei ist ein Zusammenschluss von Bürger*innen, die Bürger*innen unterstützen, sie anhören und ihre Interessen vertreten. <br>
-                    Wir wollen dem Volk wieder Macht versprechen. Politische Parteien dürfen nicht so viel Einfluss besitzen, wie sie ihn jetzt gerade unbestraft ausleben. <br>
-                    Die Interkommunale Volkspartei einen Zusammenschluss aus dem Volk, der durch unsere Ursprünge unmittelbar aus der Menge der Schüler*innen, Arbeiter*innen und den Pensionist*innen kommt, der seine Werte, sein Erreichtes und seine Arbeit dem Volk zurückgibt. <br>
-                    Jede*r soll die gleiche Möglichkeit haben bei einem Sachverhalt mitzuentscheiden und jede*r wird von der Interkommunalen Volkspartei genau diese Möglichkeit bekommen. <br>
-                    Niemand – kein*e Politiker*in, kein*e Konzernchef*in, kein*e Bankier*in – soll ein höheres Stimmrecht als ein*e andere*r Bürger*in aus dem Volk haben. <br>
+                <p align="justify">
+                    Die Interkommunale Volkspartei ist ein Zusammenschluss von Bürger*innen, die Bürger*innen unterstützen, sie anhören und ihre Interessen vertreten. </br>
+                    Wir wollen dem Volk wieder Macht versprechen. Politische Parteien dürfen nicht so viel Einfluss besitzen, wie sie ihn jetzt gerade unbestraft ausleben. </br>
+                    Die Interkommunale Volkspartei einen Zusammenschluss aus dem Volk, der durch unsere Ursprünge unmittelbar aus der Menge der Schüler*innen, Arbeiter*innen und den Pensionist*innen kommt, der seine Werte, sein Erreichtes und seine Arbeit dem Volk zurückgibt. </br>
+                    Jede*r soll die gleiche Möglichkeit haben bei einem Sachverhalt mitzuentscheiden und jede*r wird von der Interkommunalen Volkspartei genau diese Möglichkeit bekommen. </br>
+                    Niemand – kein*e Politiker*in, kein*e Konzernchef*in, kein*e Bankier*in – soll ein höheres Stimmrecht als ein*e andere*r Bürger*in aus dem Volk haben. </br>
                     Jede*r hat eine unübertragbare Möglichkeit und Stimme, um politische Geschehen mitzubestimmen.
                 </p>
             </section>
