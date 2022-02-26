@@ -248,6 +248,10 @@ a:focus-visible,
   min-height: 100vh;
 }
 
+#about li {
+  padding-bottom: 0.6em;
+}
+
 #satzungFlex {
   padding-top: 2rem;
   display: flex;
