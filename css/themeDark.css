@@ -1,0 +1,107 @@
+:root {
+  background-color: #262422;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#menuBtn {
+  background-color: #26242266;
+}
+#menuBtn.focusActive {
+  background-color: #444;
+}
+#menuBtn #burgerMenuIcon * {
+  background-color: #fff;
+}
+#menuBtn:hover #burgerMenuIcon *,
+#menuBtn:focus-visible #burgerMenuIcon * {
+  background-color: #f80;
+}
+#menuBtn:active #burgerMenuIcon * {
+  background-color: #f40;
+}
+
+#mediaLinks {
+  background-color: #26242266;
+}
+#mediaLinks a:hover * {
+  fill: #f80;
+}
+#mediaLinks a:active * {
+  fill: #f40;
+}
+footer {
+  background-color: #666;
+}
+a,
+.linkBlock button {
+  color: #fff;
+}
+a:hover,
+a:focus-visible,
+.linkBlock button:hover,
+.linkBlock button:focus-visible {
+  color: #f80;
+}
+a:active,
+.linkBlock button:active {
+  color: #f40;
+}
+
+#title {
+  background-image: url(https://wallpaperaccess.com/full/310116.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f80;
+}
+
+#menu {
+  background-color: #444;
+}
+
+#contents li.current::after {
+  background-color: #f80;
+}
+#contents li.current:active::after {
+  background-color: #f40;
+}
+#contents button {
+  background-color: inherit;
+  color: #fff;
+}
+#contents button:hover,
+#contents button:focus-visible {
+  background-color: #666;
+  color: #f80;
+}
+#contents button:active {
+  background-color: #555;
+  color: #f40;
+}
+
+#topScroller {
+  background-color: #444;
+}
+#topScroller:hover,
+#topScroller:focus-visible {
+  background-color: #666;
+}
+#topScroller:active {
+  background-color: #555;
+}
+#topScroller i {
+  color: #fff;
+}
+#topScroller:hover i,
+#topScroller:focus-visible i {
+  color: #f80;
+}
+#topScroller:active i {
+  color: #f40;
+}
+
+@media (max-width: 800px) {
+  #mediaLinks {
+    background-color: inherit;
+  }
+}

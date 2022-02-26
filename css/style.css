@@ -1,9 +1,3 @@
-:root {
-  background-color: #262422;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +21,6 @@ body {
 
   height: 3rem;
   width: 3rem;
-  background-color: #26242266;
   border: none;
 
   border-bottom-left-radius: 1rem;
@@ -36,7 +29,6 @@ body {
   transition-timing-function: ease-in-out;
 }
 #menuBtn.focusActive {
-  background-color: #444;
   border-bottom-left-radius: 0px;
 }
 #menuBtn #burgerMenuIcon {
@@ -52,7 +44,6 @@ body {
   position: absolute;
   width: 100%;
   height: 20%;
-  background-color: #fff;
   transition: transform 500ms cubic-bezier(0.5, -0.5, 0.2, 1);
 }
 #menuBtn #burgerMenu0 {
@@ -77,13 +68,6 @@ body {
 #menuBtn:focus-visible #burgerMenuIcon {
   transform: scale(1.2);
 }
-#menuBtn:hover #burgerMenuIcon *,
-#menuBtn:focus-visible #burgerMenuIcon * {
-  background-color: #f80;
-}
-#menuBtn:active #burgerMenuIcon * {
-  background-color: #f40;
-}
 
 #mediaLinks {
   position: fixed;
@@ -101,7 +85,6 @@ body {
 
   gap: 1rem;
   padding: 1rem;
-  background-color: #26242266;
   border-bottom-left-radius: 2rem;
 }
 #mediaLinks a {
@@ -118,20 +101,12 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
-#mediaLinks a:hover * {
-  fill: #f80;
-}
-#mediaLinks a:active * {
-  fill: #f40;
-}
 
 footer {
   height: 150px;
   display: flex;
   place-content: center;
   place-items: center;
-
-  background-color: #666;
   padding: 1rem;
 
   font-size: larger;
@@ -168,15 +143,10 @@ a:focus-visible,
 .linkBlock button:hover,
 .linkBlock button:focus-visible {
   cursor: pointer;
-  color: #f80;
-}
-a:active,
-.linkBlock button:active {
-  color: #f40;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 #title {
@@ -186,11 +156,6 @@ a:active,
   flex-direction: column;
   place-content: center;
   place-items: center;
-
-  background-image: url(https://wallpaperaccess.com/full/310116.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #f80;
 }
 
 #wrapper {
@@ -213,7 +178,6 @@ a:active,
   position: -webkit-sticky;
   top: 0px;
   height: 100vh;
-  background-color: #444;
 }
 
 #contents ul {
@@ -233,32 +197,14 @@ a:active,
   height: 100%;
   right: 0px;
 }
-#contents li.current::after {
-  background-color: #f80;
-}
-#contents li.current:active::after {
-  background-color: #f40;
-}
 #contents button {
   width: 100%;
   height: 4rem;
   padding: 0px 2rem 0px;
   border: none;
-  background-color: inherit;
 
   font-size: 1rem;
   text-decoration: underline;
-  color: #fff;
-}
-#contents button:hover,
-#contents button:focus-visible {
-  cursor: pointer;
-  background-color: #666;
-  color: #f80;
-}
-#contents button:active {
-  background-color: #555;
-  color: #f40;
 }
 
 #topScroller {
@@ -266,7 +212,6 @@ a:active,
   bottom: 3rem;
   right: 1.5rem;
 
-  background-color: #444;
   height: 3rem;
   width: 3rem;
   border-radius: 100%;
@@ -279,24 +224,14 @@ a:active,
 }
 #topScroller:hover,
 #topScroller:focus-visible {
-  background-color: #666;
   transform: scale(1.2);
 }
 #topScroller:active {
-  background-color: #555;
   transform: scale(1.1);
 }
 #topScroller i {
   font-weight: bolder;
-  color: #fff;
   font-size: 1.5rem;
-}
-#topScroller:hover i,
-#topScroller:focus-visible i {
-  color: #f80;
-}
-#topScroller:active i {
-  color: #f40;
 }
 
 #site {
@@ -326,25 +261,14 @@ a:active,
   text-align: center;
 }
 
-#contact li {
-  width: max-content;
-  transition: transform 200ms ease-in-out;
-}
-#contact li:hover {
-  --scaleBy: 1.5;
-  transform: scale(var(--scaleBy))
-    translateX(
-      calc(100% * calc(calc(var(--scaleBy) - 1) / calc(2 * var(--scaleBy))))
-    );
-}
-
 .linkBlock {
   padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   justify-items: center;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
+  flex-wrap: wrap;
 }
 .linkBlock a,
 .linkBlock button {
@@ -383,7 +307,7 @@ a:active,
     transform: translateX(100%);
   }
   .condHide {
-    display: none;
+    display: none !important;
   }
 
   #menuBtn {
@@ -401,7 +325,6 @@ a:active,
     width: 15rem;
     max-height: calc(100vh - 3.5rem);
     border-radius: 1rem 0px 0px 1rem;
-    background-color: #444;
     overflow: auto;
 
     transition: transform 200ms ease-in-out;
@@ -409,7 +332,6 @@ a:active,
 
   #mediaLinks {
     position: static;
-    background-color: inherit;
     height: 5rem;
     width: 100%;
   }
@@ -420,6 +342,14 @@ a:active,
   #contents li::after {
     right: unset;
     left: 0px;
+  }
+  #contents button {
+    width: 100%;
+    height: 4rem;
+  }
+
+  #contents a img {
+    width: 3rem;
   }
 
   #topScrWrapper {
