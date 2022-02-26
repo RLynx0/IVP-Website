@@ -65,16 +65,16 @@ a:active,
 #contents li.current:active::after {
   background-color: #f40;
 }
-#contents button {
+#contents a {
   background-color: inherit;
   color: #fff;
 }
-#contents button:hover,
-#contents button:focus-visible {
+#contents a:hover,
+#contents a:focus-visible {
   background-color: #666;
   color: #f80;
 }
-#contents button:active {
+#contents a:active {
   background-color: #555;
   color: #f40;
 }

@@ -72,12 +72,12 @@
             </div>
             <div id="contents">
                 <ul>
-                    <li><a href="#About"><button>Über uns</button></a></li>
+                    <li><a href="#About">Über uns</a></li>
+                    <li><a href="#Info">Info</a></li>
+                    <li><a href="#Satzung">Satzung</a></li>
+                    <li><a href="#Dokumente">Dokumente</a></li>
                     <!-- <li><a href="#Kontakt"><button>Kontakt</button></a></li> -->
-                    <li><a href="#Satzung"><button>Satzung</button></a></li>
-                    <li><a href="#Info"><button>Info</button></a></li>
                     <!-- <li><a href="#Spende"><button>Spenden</button></a></li> -->
-                    <li><a href="#Dokumente"><button>Dokumente</button></a></li>
                 </ul>
             </div>
         </div>
@@ -85,26 +85,16 @@
             <section id="about">
                 <a id="About"></a>
                 <h2>Über uns</h2>
-                <p align="justify">
-                   <ul>
+                <p>
+                <ul>
                     <li> Die Interkommunale Volkspartei ist ein Zusammenschluss von Bürger*innen, die Bürger*innen unterstützen, sie anhören und ihre Interessen vertreten. </li> <br>
                     <li> Wir wollen dem Volk wieder Macht versprechen. Politische Parteien dürfen nicht so viel Einfluss besitzen, wie sie ihn jetzt gerade unbestraft ausleben. </li> <br>
                     <li> Die Interkommunale Volkspartei einen Zusammenschluss aus dem Volk, der durch unsere Ursprünge unmittelbar aus der Menge der Schüler*innen, Arbeiter*innen und den Pensionist*innen kommt, der seine Werte, sein Erreichtes und seine Arbeit dem Volk zurückgibt. </li> <br>
                     <li> Jede*r soll die gleiche Möglichkeit haben bei einem Sachverhalt mitzuentscheiden und jede*r wird von der Interkommunalen Volkspartei genau diese Möglichkeit bekommen. </li> <br>
                     <li> Niemand – kein*e Politiker*in, kein*e Konzernchef*in, kein*e Bankier*in – soll ein höheres Stimmrecht als ein*e andere*r Bürger*in aus dem Volk haben. </li> <br>
                     <li> Jede*r hat eine unübertragbare Möglichkeit und Stimme, um politische Geschehen mitzubestimmen. </li>
-                  </ul>
+                </ul>
                 </p>
-            </section>
-            <section id="satzung">
-                <a id="Satzung"></a>
-                <h2>Satzung</h2>
-                <div id="satzungFlex">
-                    <a href="/Satzung.pdf" target="empty">
-                        <img src="/img/prev/satzungPrev.svg" alt="Veorschau für den Satzungstext">
-                        <h3>Zum Satzungstext</h3>
-                    </a>
-                </div>
             </section>
             <section id="info">
                 <a id="Info"></a>
@@ -120,6 +110,16 @@
                     print str_replace([" ", "\n"], ["&nbsp;", "<br>"], file_get_contents("./info.txt"));
                     ?>
                 </p> -->
+            </section>
+            <section id="satzung">
+                <a id="Satzung"></a>
+                <h2>Satzung</h2>
+                <div id="satzungFlex">
+                    <a href="/Satzung.pdf" target="empty">
+                        <img src="/img/prev/satzungPrev.svg" alt="Veorschau für den Satzungstext">
+                        <h3>Zum Satzungstext</h3>
+                    </a>
+                </div>
             </section>
             <!-- <section id="contact">
                 <a id="Kontakt"></a>
