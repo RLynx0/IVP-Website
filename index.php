@@ -88,7 +88,7 @@
                 <a id="Einladung"></a>
                 <h2>Einladung zum Infoabend</h2>
                 <p>
-                    Am 4. September 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
+                    Am 4. März 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
                 </p>
                 <h3>
                     <div class="linkHolder">
