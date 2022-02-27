@@ -55,6 +55,41 @@ a:active,
   background-color: #f80;
 }
 
+section.important {
+  background-color: #f80;
+  color: #fff;
+}
+section.important h3 {
+  font-size: 2rem;
+}
+section.important a {
+  z-index: 0;
+  position: relative;
+  color: #fff;
+  transition: color 200ms ease-in-out;
+}
+section.important a::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  right: calc(100% + 1rem);
+  left: -1rem;
+  top: -0.5rem;
+  height: calc(100% + 1rem);
+  background-color: #fff;
+  border-radius: 1rem 0px 1rem 0px;
+  transition: right 200ms ease-in-out;
+}
+section.important a:hover {
+  color: #f80;
+}
+section.important a:hover::before {
+  right: -1rem;
+}
+section.important a:active {
+  color: #f40;
+}
+
 #menu {
   background-color: #444;
 }

@@ -12,7 +12,8 @@
     <script src="./scripts/mainScript.js?v=<?php echo time(); ?>" defer></script>
     <link rel="shortcut icon" href="https://i0.wp.com/ikvp.at/wp-content/uploads/2022/02/cropped-Webseite_logo.png?fit=192%2C192&#038;ssl=1" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/themeLight.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/themeLight.css?v=<?php echo time(); ?>" id="themeStyleLink">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
