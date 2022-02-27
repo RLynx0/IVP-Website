@@ -1,0 +1,153 @@
+:root {
+  background-color: #fff;
+  color: #210;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#title {
+  color: #fff;
+}
+
+section.important {
+  background-color: #f80;
+  color: #fff;
+}
+section.important h3 {
+  font-size: 2rem;
+}
+section.important a {
+  z-index: 0;
+  position: relative;
+  color: #fff;
+  transition: color 200ms ease-in-out;
+}
+section.important a::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  right: calc(100% + 1rem);
+  left: -1rem;
+  top: -0.5rem;
+  height: calc(100% + 1rem);
+  background-color: #fff;
+  border-radius: 1rem 0px 1rem 0px;
+  transition: right 200ms ease-in-out;
+}
+section.important a:hover {
+  color: #f80;
+}
+section.important a:hover::before {
+  right: -1rem;
+}
+section.important a:active {
+  color: #f40;
+}
+
+#menuBtn {
+  background-color: #2226;
+}
+#menuBtn.focusActive {
+  background-color: #222a;
+}
+#menuBtn #burgerMenuIcon * {
+  background-color: #fff;
+}
+#menuBtn:hover #burgerMenuIcon *,
+#menuBtn:focus-visible #burgerMenuIcon * {
+  background-color: #f80;
+}
+#menuBtn:active #burgerMenuIcon * {
+  background-color: #f40;
+}
+
+#mediaLinks {
+  background-color: #2226;
+}
+#mediaLinks a:hover * {
+  fill: #f80;
+}
+#mediaLinks a:active * {
+  fill: #f40;
+}
+footer {
+  background-color: #f80;
+  color: #fff;
+}
+a,
+.linkBlock button {
+  color: #210;
+}
+a:hover,
+a:focus-visible,
+.linkBlock button:hover,
+.linkBlock button:focus-visible {
+  color: #f80;
+}
+a:active,
+.linkBlock button:active {
+  color: #f40;
+}
+
+#title {
+  background-image: url(https://wallpaperaccess.com/full/310116.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #f80;
+}
+
+#menu {
+  background-color: #333;
+}
+
+#contents li.current::after {
+  background-color: #f80;
+}
+#contents li.current:active::after {
+  background-color: #f40;
+}
+#contents a {
+  background-color: inherit;
+  color: #fff;
+}
+#contents a:hover,
+#contents a:focus-visible {
+  background-color: #555;
+  color: #f80;
+}
+#contents a:active {
+  background-color: #444;
+}
+
+#topScroller {
+  background-color: #f80;
+}
+#topScroller:hover,
+#topScroller:focus-visible {
+  background-color: #fa0;
+}
+#topScroller:active {
+  background-color: #f90;
+}
+#topScroller i {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  #menu {
+    background-color: #222a;
+  }
+  #contents a {
+    background-color: transparent;
+    color: #fff;
+  }
+  #contents a:hover {
+    background-color: #fff4;
+    color: #f80;
+  }
+  #contents a:active {
+    background-color: #fff2;
+    color: #f40;
+  }
+  #mediaLinks {
+    background-color: transparent;
+  }
+}

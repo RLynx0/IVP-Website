@@ -12,7 +12,7 @@
     <script src="./scripts/mainScript.js?v=<?php echo time(); ?>" defer></script>
     <link rel="shortcut icon" href="https://i0.wp.com/ikvp.at/wp-content/uploads/2022/02/cropped-Webseite_logo.png?fit=192%2C192&#038;ssl=1" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="css/themeDark.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/themeLight.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -48,13 +48,13 @@
                         </g>
                     </svg>
                 </a> -->
-                <!-- <a href="https://www.twitter.com/" target="empty">
+                <a href="https://www.twitter.com/ivp_oesterreich" target="empty">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 100 81.303" width="100pt" height="81.303pt">
                         <g clip-path="url(#_clipPath_1iTZn169aKAXgVdth4oUIvfXmncKnXO8)">
                             <path d=" M 49.316 25.146 C 29.993 24.578 16.93 15.07 7.324 3.857 Q -0.844 19.225 13.184 31.396 Q 8.268 30.876 4.199 28.466 Q 4.851 45.116 21.191 48.974 Q 16.015 50.059 11.23 49.365 Q 16.129 62.02 30.176 63.818 Q 16.855 73.037 0 72.021 C 44.199 97.763 89.355 66.528 89.355 20.459 C 93.169 17.922 96.719 14.278 100 9.521 Q 91.997 12.765 87.988 12.841 Q 94.922 8.775 97.363 1.318 Q 93.102 4.303 84.277 6.591 Q 72.356 -4.51 58.254 3.086 C 58.064 3.188 57.768 3.374 57.594 3.5 Q 46.61 11.454 49.316 25.146 Z " />
                         </g>
                     </svg>
-                </a> -->
+                </a>
                 <a href="https://www.instagram.com/ivp_oesterreich/" target="empty">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 100 100" width="100pt" height="100pt">
                         <g clip-path="url(#_clipPath_OgSYmnYGAeVg8KH0OzNcSRX9fJyBQudP)">
@@ -72,6 +72,7 @@
             </div>
             <div id="contents">
                 <ul>
+                    <li><a href="#Einladung">Infoabend</a></li>
                     <li><a href="#About">Über uns</a></li>
                     <li><a href="#Info">Info</a></li>
                     <li><a href="#Satzung">Satzung</a></li>
@@ -82,10 +83,21 @@
             </div>
         </div>
         <div id="site">
+            <section id="invitation" class="important">
+                <a id="Einladung"></a>
+                <h2>Einladung zum Infoabend</h2>
+                <p>
+                    Am 4. September 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
+                </p>
+                <h3>
+                    <a href="" target="empty">
+                        Klicke hier zum Beitreten!
+                    </a>
+                </h3>
+            </section>
             <section id="about">
                 <a id="About"></a>
                 <h2>Über uns</h2>
-                <p>
                 <ul class="IVPArrowList">
                     <li> Die Interkommunale Volkspartei ist ein Zusammenschluss von Bürger*innen, die Bürger*innen unterstützen, sie anhören und ihre Interessen vertreten. </li>
                     <li> Wir wollen dem Volk wieder Macht versprechen. Politische Parteien dürfen nicht so viel Einfluss besitzen, wie sie ihn jetzt gerade unbestraft ausleben. </li>
@@ -94,7 +106,6 @@
                     <li> Niemand – kein*e Politiker*in, kein*e Konzernchef*in, kein*e Bankier*in – soll ein höheres Stimmrecht als ein*e andere*r Bürger*in aus dem Volk haben. </li>
                     <li> Jede*r hat eine unübertragbare Möglichkeit und Stimme, um politische Geschehen mitzubestimmen. </li>
                 </ul>
-                </p>
             </section>
             <section id="info">
                 <a id="Info"></a>
