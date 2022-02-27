@@ -95,7 +95,7 @@ a:active,
 }
 
 #menu {
-  background-color: #333;
+  background-color: #444;
 }
 
 #contents li.current::after {
@@ -110,11 +110,12 @@ a:active,
 }
 #contents a:hover,
 #contents a:focus-visible {
-  background-color: #555;
+  background-color: #666;
   color: #f80;
 }
 #contents a:active {
-  background-color: #444;
+  background-color: #555;
+  color: #f40;
 }
 
 #topScroller {
