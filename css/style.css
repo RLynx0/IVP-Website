@@ -253,6 +253,15 @@ a:focus-visible,
   min-height: 100vh;
 }
 
+section.important h3 {
+  font-size: 2rem;
+}
+section.important .linkHolder {
+  z-index: 0;
+  position: relative;
+  max-width: max-content;
+}
+
 .IVPArrowList {
   list-style: none;
   padding-left: 2rem;

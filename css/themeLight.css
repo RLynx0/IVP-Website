@@ -11,12 +11,7 @@ section.important {
   background-color: #f80;
   color: #fff;
 }
-section.important h3 {
-  font-size: 2rem;
-}
 section.important a {
-  z-index: 0;
-  position: relative;
   color: #fff;
   transition: color 200ms ease-in-out;
 }

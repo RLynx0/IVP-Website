@@ -91,9 +91,11 @@
                     Am 4. September 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
                 </p>
                 <h3>
-                    <a href="" target="empty">
-                        Klicke hier zum Beitreten!
-                    </a>
+                    <div class="linkHolder">
+                        <a href="" target="empty">
+                            Klicke hier um beizutreten!
+                        </a>
+                    </div>
                 </h3>
             </section>
             <section id="about">
