@@ -83,7 +83,8 @@ a:active,
 }
 
 #menu {
-  background-color: #444;
+  background-color: #eee;
+  border-right: solid 1px #888;
 }
 
 #contents li.current::after {
@@ -94,15 +95,15 @@ a:active,
 }
 #contents a {
   background-color: inherit;
-  color: #fff;
+  color: #210;
 }
 #contents a:hover,
 #contents a:focus-visible {
-  background-color: #666;
+  background-color: #fff;
   color: #f80;
 }
 #contents a:active {
-  background-color: #555;
+  background-color: #e8e8e8;
   color: #f40;
 }
 

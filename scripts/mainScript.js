@@ -92,19 +92,12 @@ function conditionalClearFocus(event) {
   }
 }
 
-function switchTheme() {
+function theme(to) {
   const stlink = document.getElementById("themeStyleLink");
-  console.log(stlink.getAttribute("href").match(/theme\w+/)[0]);
-  switch (stlink.getAttribute("href").match(/theme\w+/)[0]) {
-    case "themeLight":
-      stlink.setAttribute("href", "css/themeDark.css?v=" + new Date().getTime);
-      console.log(stlink);
-      break;
-    case "themeDark":
-      stlink.setAttribute("href", "css/themeLight.css?v=" + new Date().getTime);
-      console.log(stlink);
-      break;
-  }
+  stlink.setAttribute(
+    "href",
+    "css/theme" + to + ".css?v=" + new Date().getTime
+  );
 }
 
 window.onscroll = updateContentsCurrent;

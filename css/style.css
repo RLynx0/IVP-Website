@@ -182,6 +182,10 @@ a:focus-visible,
 #menu {
   z-index: 1;
   flex: 1;
+
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
 
 #contents {
@@ -413,8 +417,6 @@ section.important .linkHolder {
     max-height: calc(100vh - 3.5rem);
     border-radius: 1rem 0px 0px 1rem;
     overflow: hidden;
-
-    transition: transform 200ms ease-in-out;
   }
 
   #mediaLinks {
