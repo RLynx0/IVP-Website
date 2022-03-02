@@ -87,7 +87,13 @@
             <section id="invitation" class="important">
                 <a id="Einladung"></a>
                 <h2>Einladung zum Infoabend</h2>
+<<<<<<< HEAD
                 <p>Wir halten am 4. März 2022 um 17:00 Uhr einen Infoabend via Zoom ab!</p>
+=======
+                <p>
+                    Am 4. März 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
+                </p>
+>>>>>>> a62a87b9099ce0c886479d2c3af6b9e2023b7d94
                 <h3>
                     <dib class="linkHolder">
                         <a href="https://us02web.zoom.us/j/83248002737?pwd=b0h6T1ZSaWdKakljYXRqSnl5dTBkQT09" target="empty">
