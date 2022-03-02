@@ -87,16 +87,42 @@
             <section id="invitation" class="important">
                 <a id="Einladung"></a>
                 <h2>Einladung zum Infoabend</h2>
-                <p>
-                    Am 4. September 2022 um 17:00 halten wir via Zoom einen Infoabend ab!
-                </p>
+                <p>Wir halten am 4. März 2022 um 17:00 Uhr einen Infoabend via Zoom ab!</p>
                 <h3>
-                    <div class="linkHolder">
-                        <a href="" target="empty">
-                            Klicke hier um beizutreten!
+                    <dib class="linkHolder">
+                        <a href="https://us02web.zoom.us/j/83248002737?pwd=b0h6T1ZSaWdKakljYXRqSnl5dTBkQT09" target="empty">
+                            Klicke hier um dem Zoom-Meeting beizutreten!
                         </a>
-                    </div>
+                    </dib>
                 </h3>
+                <p>
+                    Thema: Infoabend - Interkommunale Volkspartei <br>
+                    Uhrzeit: 4.März.2022 05:00 PM Amsterdam, Berlin, Rom, Stockholm, Wien
+                </p>
+                <div id="moreInfo">
+                    <button>Informationen zum Zoom-Meeting</button>
+                    <p class="btnHide">
+                        <br> <br>
+                        Meeting-ID: 832 4800 2737 <br>
+                        Kenncode: 661405 <br>
+                        Schnelleinwahl mobil <br>
+                        +13017158592,,83248002737#,,,,*661405# Vereinigte Staaten (Washington DC) <br>
+                        +13126266799,,83248002737#,,,,*661405# Vereinigte Staaten (Chicago) <br>
+                        <br>
+                        Einwahl nach aktuellem Standort <br>
+                        +1 301 715 8592 Vereinigte Staaten (Washington DC) <br>
+                        +1 312 626 6799 Vereinigte Staaten (Chicago) <br>
+                        +1 346 248 7799 Vereinigte Staaten (Houston) <br>
+                        +1 669 900 6833 Vereinigte Staaten (San Jose) <br>
+                        +1 929 205 6099 Vereinigte Staaten (New York) <br>
+                        +1 253 215 8782 Vereinigte Staaten (Tacoma) <br>
+                        Meeting-ID: 832 4800 2737 <br>
+                        Kenncode: 661405 <br>
+                        <a href="https://us02web.zoom.us/u/kd3Wufv75r" target="empty">Ortseinwahl suchen</a>
+                    </p>
+
+
+                </div>
             </section>
             <section id="about">
                 <a id="About"></a>
