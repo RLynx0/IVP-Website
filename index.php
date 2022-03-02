@@ -90,11 +90,11 @@
 
                 <p>Wir halten am 4. März 2022 um 17:00 Uhr einen Infoabend via Zoom ab!</p>
                 <h3>
-                    <dib class="linkHolder">
+                    <div class="linkHolder">
                         <a href="https://us02web.zoom.us/j/83248002737?pwd=b0h6T1ZSaWdKakljYXRqSnl5dTBkQT09" target="empty">
                             Klicke hier um dem Zoom-Meeting beizutreten!
                         </a>
-                    </dib>
+                    </div>
                 </h3>
                 <p>
                     Thema: Infoabend - Interkommunale Volkspartei <br>
