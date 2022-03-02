@@ -322,15 +322,23 @@ section.important .linkHolder {
   place-items: center;
   text-align: center;
 }
-.linkBlock h3,
 #satzungFlex h3 {
   font-size: 1.8rem;
+}
+.linkBlock h {
+  font-size: 1rem;
 }
 .linkBlock a img,
 .linkBlock button img,
 #satzungFlex a img {
   border-radius: 0.5rem;
   transition: transform 200ms ease-in-out;
+}
+.linkBlock a img {
+  width: 6rem;
+}
+.linkBlock button img {
+  width: 6.5rem;
 }
 .linkBlock a:hover img,
 .linkBlock button:hover img,
