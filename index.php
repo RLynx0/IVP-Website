@@ -73,7 +73,7 @@
             </div>
             <div id="contents">
                 <ul>
-                    <li><a href="#Einladung">Infoabend</a></li>
+                    <!-- <li><a href="#Einladung">Infoabend</a></li> -->
                     <li><a href="#About">Über uns</a></li>
                     <li><a href="#Info">Info</a></li>
                     <li><a href="#Satzung">Satzung</a></li>
@@ -84,7 +84,7 @@
             </div>
         </div>
         <div id="site">
-            <section id="invitation" class="important">
+            <!-- <section id="invitation" class="important">
                 <a id="Einladung"></a>
                 <h2>Einladung zum Infoabend</h2>
 
@@ -124,7 +124,7 @@
 
 
                 </div>
-            </section>
+            </section> -->
             <section id="about">
                 <a id="About"></a>
                 <h2>Über uns</h2>
@@ -140,7 +140,8 @@
             <section id="info">
                 <a id="Info"></a>
                 <h2>Info</h2>
-                <h3>Diese Website ist noch nicht fertig!</h3>
+                <!-- <h3>Aufzeichnung des ersten IVP-Infoabends</h3>
+                <video src=""></video> -->
                 <p>
                     Bei Fragen kontaktiere uns bitte unter
                     <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>!
