@@ -140,8 +140,9 @@
             <section id="info">
                 <a id="Info"></a>
                 <h2>Info</h2>
-                <!-- <h3>Aufzeichnung des ersten IVP-Infoabends</h3>
-                <video src=""></video> -->
+                <a href="https://drive.google.com/file/d/1zD3VwzN2RUWFNkF8_9jX3F4XBS5Fwlj0" target="empty">
+                    <h3>Aufzeichnung des ersten IVP-Infoabends</h3>
+                </a>
                 <p>
                     Bei Fragen kontaktiere uns bitte unter
                     <a href="mailto:interkommunalevolkspartei@gmail.com">interkommunalevolkspartei@gmail.com</a>!
