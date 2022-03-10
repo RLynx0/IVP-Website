@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interkommunale Volkspartei | Kommunicat</title>
+    <link rel="stylesheet" href="./css/kommunicatStyle.css">
+    <script src="./scripts/kommunicatScript.js" defer></script>
+    <script src="./scripts/kommunicatBot.js" defer></script>
+</head>
+
+<body>
+    <section id="history"></section>
+    <form id="input">
+        <div style="display: flex; flex-flow: column;">
+            <div>
+                <input type="radio" name="pos" id="Anonym" checked>
+                <label for="Anonym">Anonym</label>
+            </div>
+            <div>
+                <input type="radio" name="pos" id="User">
+                <label for="User">User</label>
+            </div>
+            <div>
+                <input type="radio" name="pos" id="IVPmember">
+                <label for="IVPmember">IVP member</label>
+            </div>
+            <div>
+                <input type="radio" name="pos" id="IVP">
+                <label for="IVP">IVP</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Self">
+                <label for="Self">Self</label>
+            </div>
+            <input type="text" id="customUserName" placeholder="Username . . .">
+        </div>
+
+        <div id="textIn" role="textbox" contenteditable="true"></div>
+        <button type="submit">Senden</button>
+    </form>
+</body>
+
+</html>
