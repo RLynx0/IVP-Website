@@ -3,35 +3,21 @@ const textIn = document.querySelector("#input #textIn");
 const history = document.querySelector("#history");
 let shift = false;
 
+function addUser(name = "", pos = "user", isSelf = false) {
+  const usrData = { name, pos, isSelf };
+  const newUser = document
+    .querySelector("#userInput *")
+    .appendChild(document.createElement("option"));
+  newUser.value = JSON.stringify(usrData);
+  newUser.appendChild(document.createTextNode(name));
+}
+
 form.onsubmit = () => {
   if (textIn.innerHTML == "") return false;
-
-  let usrName = document.querySelector("#customUserName").value;
-  if (usrName == "") usrName = "DefaultName";
-
-  const isSelf = document.querySelector("input#Self").checked;
-
-  if (document.querySelector("input#Anonym").checked)
-    addMessage(textIn.innerHTML);
-  if (document.querySelector("input#User").checked)
-    addMessage(textIn.innerHTML, {
-      name: usrName,
-      pos: "user",
-      isSelf: isSelf,
-    });
-  if (document.querySelector("input#IVPmember").checked)
-    addMessage(textIn.innerHTML, {
-      name: usrName,
-      pos: "IVPmember",
-      isSelf: isSelf,
-    });
-  if (document.querySelector("input#IVP").checked)
-    addMessage(textIn.innerHTML, {
-      name: "Interkommunale Volkspartei",
-      pos: "IVP",
-      isSelf: isSelf,
-    });
-
+  addMessage(
+    textIn.innerHTML,
+    JSON.parse(document.querySelector("#userInput *").value)
+  );
   textIn.innerHTML = "";
   return false;
 };
@@ -131,6 +117,17 @@ function addMessage(text, user) {
   }
   history.scrollTop = history.scrollHeight;
 
-  if (text.match(/^@!/))
-    kommunicatResponse(text.replace(/^@!/, "").trim(), user);
+  if (text.match(/^(<br>|&nbsp;|\s)*@!/)) {
+    setTimeout(() => {
+      kommunicatResponse(
+        text
+          .replace(/(&nbsp; ?|<.*?>|\s)+/g, " ")
+          .replace(/^ ?@! ?/, "")
+          .replace(/ $/, ""),
+        user
+      );
+    }, 0);
+  }
 }
+
+function callKommunicat(text, user) {}

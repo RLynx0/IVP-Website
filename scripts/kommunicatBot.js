@@ -1,254 +1,229 @@
-const botSignature = { name: "!Kommunicat", pos: "bot" };
+function kommunicatResponse(command, user) {
+  const handler = {
+    command,
+    user,
+    response: "",
+    firstWd() {
+      return this.command.split(" ")[0];
+    },
+    updateCommand() {
+      this.command = this.command.replace(this.firstWd(), "").replace(/^ /, "");
+    },
+  };
 
-function kommunicatResponse(input, user) {
-  let response = "";
-  let splitsUsed = 0;
-  const splitInput = input.split(" ");
-
-  switch (splitInput[0].toLowerCase()) {
+  switch (handler.firstWd().toLowerCase()) {
     case "":
-      response += purrpose();
-      splitsUsed++;
-      break;
-    case " ":
-      response += purrpose();
-      splitsUsed++;
-      break;
-    case "purpose":
-      response += purrpose();
-      splitsUsed++;
-      break;
-    case "purrpose":
-      response += purrpose();
-      splitsUsed++;
+      purrpose(handler);
       break;
     case "kommunicat":
-      response += "That's me! 😸🧡";
-      splitsUsed++;
+      purrpose(handler);
+      break;
+    case "purpose":
+      purrpose(handler);
+      break;
+    case "purrpose":
+      purrpose(handler);
       break;
 
-    case "hi":
-      response += greet(user);
-      splitsUsed++;
-      break;
-    case "hey":
-      response += greet(user);
-      splitsUsed++;
-      break;
-    case "hello":
-      response += greet(user);
-      splitsUsed++;
-      break;
-    case "high-five":
-      response += "✋🏾✨";
-      splitsUsed++;
-      break;
-    case "highfive":
-      response += "✋🏾✨";
-      splitsUsed++;
-      break;
-    case "ping":
-      response += "pong";
-      splitsUsed++;
+    case "help":
+      help(handler);
       break;
 
     case "whoami":
-      response += whoami(user);
-      splitsUsed++;
+      whoami(handler);
+      break;
+
+    case "hi":
+      greet(handler);
+      break;
+    case "hello":
+      greet(handler);
+      break;
+    case "hey":
+      greet(handler);
       break;
 
     case "echo":
-      response += input.replace(/^echo /i, "");
-      splitsUsed += splitInput.length;
+      echo(handler);
       break;
     case "repeat":
-      response += input.replace(/^repeat /i, "");
-      splitsUsed += splitInput.length;
+      echo(handler);
       break;
     case "whisper":
-      response += input.replace(/^whisper /i, "").toLowerCase();
-      splitsUsed += splitInput.length;
+      whisper(handler);
       break;
     case "shout":
-      response += input.replace(/^shout /i, "").toUpperCase();
-      splitsUsed += splitInput.length;
+      shout(handler);
       break;
 
-    case "set":
-      variables[splitInput[1]] = splitInput[2];
-      response += `${splitInput[1]} set to ${splitInput[2]}`;
-      splitsUsed += 2;
+    case "execute":
+      execute(handler);
       break;
-    case "read":
-      response += `${splitInput[1]} is equal to ${variables[splitInput[1]]}`;
-      splitsUsed++;
+    case "do":
+      execute(handler);
       break;
 
     case "dice":
-      response += dice(splitInput[1]);
-      splitsUsed += 2;
-      break;
-
-    case "time":
-      response += JSON.stringify(new Date());
-      splitsUsed++;
-      break;
-
-    case "chess":
-      input != "chess" && input != "chess "
-        ? (response += chess(input.replace(/^chess /i, ""), user))
-        : (response += chess("", user));
-      splitsUsed++;
+      dice(handler);
       break;
 
     default:
-      response += `Sorry, I don't know what you mean by '${splitInput[0]}' :( <br> <br>
-            For a list of commands I can execute just ask me for @! help`;
-      splitsUsed += splitInput.length;
+      handler.response = `Sorry, I don't know what you mean by '${handler.firstWd()}' :( <br> <br>
+        For a list of commands I can execute just ask me for @! help`;
+      handler.command = "";
+      break;
   }
 
-  if (splitsUsed < splitInput.length)
-    response += `<br><br>(Ignored unexpected expression '${input.slice(
-      input.indexOf(splitInput[splitsUsed])
-    )}')`;
+  if (handler.command != "")
+    handler.response += `<br><br>(Ignored unexpected expression '${handler.command}')`;
 
-  addMessage(response, botSignature);
+  addMessage(handler.response, { name: "!Kommunicat", pos: "bot" });
 }
 
-function purrpose() {
-  return `Hi! <br>
-    I'm Kommunicat, IVPs chatroom-bot 😸 <br> <br>
-    I'm here to accept and process your inputs - Just lead with @! and I'll listen! <br> <br>    
-    For a list of commands I can execute just ask me for @! help <br> <br>
-    Much love, <br>
-    Kommunicat 🧡🧡`;
+function purrpose(handler) {
+  handler.response = `Hi! <br>
+  I'm Kommunicat, IVPs chatroom-bot 😸 <br> <br>
+  I'm here to accept and process your inputs - Just lead with @! and I'll listen! <br> <br>    
+  For a list of commands I can execute just ask me for @! help <br> <br>
+  Much love, <br>
+  Kommunicat 🧡🧡`;
+  handler.updateCommand();
 }
 
-function greet(user) {
-  if (user == undefined) {
-    return "Hi! 🧡";
-  }
-  return `Hi, ${user.name}! 🧡`;
+function help(handler) {
+  handler.updateCommand();
+  handler.response = `Alright, here's everything that I can do:<br><br>
+  Call '<span style="color:#fa0">echo</span>' or '<span style="color:#fa0">repeat</span>' and I will repeat everything after the command.<br>
+  Call '<span style="color:#fa0">whisper</span>' for me to repeat in loer case, '<span style="color:#fa0">shout</span>' for upper case!<br>
+  <span style="color:#fff8">
+    @! echo <span style="font-style:italic; color: #f80a">content to be repeated</span><br>
+    @! repeat <span style="font-style:italic; color: #f80a">content to be repeated</span><br>
+    @! whisper <span style="font-style:italic; color: #f80a">content to be whispered</span><br>
+    @! shout <span style="font-style:italic; color: #f80a">content to be shouted</span>
+  </span><br><br>
+  Call '<span style="color:#fa0">whoami</span>' and I'll read out your user informations!<br>
+  Optionally, follow with a property name and I'll read out that property, if it is defined for your user account.<br>
+  <span style="color:#fff8">
+    @! whoami<br>
+    @! whoami <span style="font-style:italic; color: #f80a">property</span>
+  </span><br><br>
+  Call '<span style="color:#fa0">execute</span>' or '<span style="color:#fa0">do</span>' followed by an integer and another command
+  and I'll execute the preceading command an according number of times<br>
+  <span style="color:#fff8">
+    @! execute <span style="font-style:italic; color: #08fa">integer</span> <span style="font-style:italic; color: #f80a">command to be executed</span><br>
+    @! do <span style="font-style:italic; color: #08fa">integer</span> <span style="font-style:italic; color: #f80a">command to be executed</span>
+  </span><br><br>
+  Call '<span style="color:#fa0">dice</span>' for me to throw a dice. Follow with a number to specify how many faces it should have!<br>
+  <span style="color:#fff8">
+    @! dice<br>
+    @! dice <span style="font-style:italic; color: #08fa">number</span>
+  </span><br><br>
+  Call '<span style="color:#fa0">chess</span>' to use my in-built chess system! Follow with:
+  <ul style="margin: .25em 0px">
+    <li>'<span style="color:#fa0">init</span>' to start a new game.</li>
+    <li>'<span style="color:#fa0">mode</span>' to choose whether the game is played by specific users or openly</li>
+    <li>'<span style="color:#fa0">invite</span>' to ivite another user to an existing game</li>
+    <li>The name of a field on the board in standard chess notation, for example '<span style="color:#f80">A1</span>', to show legal moves for the chess piece at this location</li>
+    <li>Two names of fields on the board in standard chess notation in a row to move a chess piece from the first location to the secon, if possible</li>
+  </ul>
+  <span style="color:#fff8">
+    @! chess init<br>
+    @! chess mode ??<br>
+    @! chess invite <span style="font-style:italic; color:#f80a">username</span>
+  </span><br><br>
+  `;
 }
 
-function whoami(user) {
-  if (user == undefined) {
-    return "You're an anonymous user!";
+function whoami(handler) {
+  handler.updateCommand();
+  if (handler.user.name == undefined) {
+    handler.response = `You're an anonymous user`;
+    return;
   }
-  return `You're ${user.name}! <br> <br> ${JSON.stringify(user)}`;
+  if (handler.firstWd() == "") {
+    handler.response = `You're  ${handler.user.name}!<br><br>${JSON.stringify(
+      handler.user
+    )}`;
+    return;
+  }
+  console.log(handler.user[handler.firstWd()]);
+  if (handler.user[handler.firstWd()] == undefined) {
+    handler.response = `'${handler.firstWd()}' is not defined for your user account!`;
+    handler.updateCommand();
+    return;
+  }
+  handler.response = handler.user[handler.firstWd()];
+  handler.updateCommand();
 }
 
-function dice(num) {
-  if (num == undefined) {
-    return Math.ceil(Math.random() * 6);
-  }
-  if (parseFloat(num) == num) {
-    return Math.ceil(Math.random() * parseFloat(num));
-  }
-  return "If you want to tell me what dice to throw, tell me how many faces it should have! <br> For example: @!dice 6";
+function greet(handler) {
+  handler.updateCommand();
+
+  handler.user.name == undefined
+    ? (handler.response = `Hi! 🧡`)
+    : (handler.response = `Hi, ${handler.user.name}! 🧡`);
 }
 
-function chess(str, user) {
-  console.log(str);
-  switch (str.split(" ")[0]) {
-    case "init":
-      const setUp = [
-        "8♖♘♗♕♔♗♘♖",
-        "7♙♙♙♙♙♙♙♙",
-        "6        ",
-        "5        ",
-        "4        ",
-        "3        ",
-        "2♟♟♟♟♟♟♟♟",
-        "1♜♞♝♛♚♝♞♜",
-        " ABCDEFGH",
-      ];
-      return drawGame(setUp);
-    case "help":
-      return `After @! chess, you can use:
-          <ul>
-           <li>"init" to start a new game</li>
-           <li>"mode" to choose whether the game is played by specific users or openly</li>
-           <li>"invite" to ivite another user to an existing game</li>
-           <li>The name of a field on the board in standard chess notation, for example "A1", to show legal moves for the chess piece at this location</li>
-           <li>Two names of fields on the board in standard chess notation in a row to move a chess piece from the first location to the secon, if possible</li>
-           `;
-    case "":
-      return `After @! chess, you can use:
-          <ul>
-           <li>"init" to start a new game</li>
-           <li>"mode" to choose whether the game is played by specific users or openly</li>
-           <li>"invite" to ivite another user to an existing game</li>
-           <li>The name of a field on the board in standard chess notation, for example "A1", to show legal moves for the chess piece at this location</li>
-           <li>Two names of fields on the board in standard chess notation in a row to move a chess piece from the first location to the secon, if possible</li>
-           `;
-    default:
-      return `I don't know, what you mean by '${str}' :( <br><br>
-            After @! chess, you can use:
-            <ul>
-            <li>"init" to start a new game</li>
-            <li>"mode" to choose whether the game is played by specific users or openly</li>
-            <li>"invite" to ivite another user to an existing game</li>
-            <li>The name of a field on the board in standard chess notation, for example "A1", to show legal moves for the chess piece at this location</li>
-            <li>Two names of fields on the board in standard chess notation in a row to move a chess piece from the first location to the secon, if possible</li>`;
+function echo(handler) {
+  handler.updateCommand();
+  handler.response = handler.command;
+  handler.command = "";
+}
+function whisper(handler) {
+  handler.updateCommand();
+  handler.response = handler.command.toLowerCase();
+  handler.command = "";
+}
+function shout(handler) {
+  handler.updateCommand();
+  handler.response = handler.command.toUpperCase();
+  handler.command = "";
+}
+
+function execute(handler) {
+  handler.updateCommand();
+  if (handler.firstWd() == "") {
+    handler.response = `After execute, specify the number of times I should execute a command followed by that command!`;
+    return;
   }
-
-  function drawGame(arrangement) {
-    const holder = document.createElement("div");
-    const board = holder.appendChild(document.createElement("table"));
-
-    board.style.margin = "1rem";
-    board.style.borderCollapse = "collapse";
-
-    for (let i = 0; i <= 8; i++) {
-      const row = board.appendChild(document.createElement("tr"));
-      for (let j = 0; j <= 8; j++) {
-        const field = row.appendChild(document.createElement("td"));
-        (i + j) % 2
-          ? (field.style.backgroundColor = "#333")
-          : (field.style.backgroundColor = "#222426");
-        if (i == 8 || j == 0) field.style.backgroundColor = "inherit";
-
-        if (j > 0 && i == 0) field.style.borderTop = "solid 2px #fff";
-        if (j > 0 && i == 7) field.style.borderBottom = "solid 2px #fff";
-        if (j == 1 && i < 8) field.style.borderLeft = "solid 2px #fff";
-        if (j == 8 && i < 8) field.style.borderRight = "solid 2px #fff";
-
-        field.style.height = "3rem";
-        field.style.width = "3rem";
-        field.style.padding = "0px";
-        field.style.textAlign = "center";
-        if (i != 8 && j != 0) {
-          field.style.fontSize = "2rem";
-          field.style.color = "#fff";
-          field.style.fontWeight = "thin";
-        }
-        field.appendChild(document.createTextNode(arrangement[i][j]));
-      }
+  if (parseInt(handler.firstWd()) + "" === handler.firstWd()) {
+    const repeat = parseInt(handler.firstWd());
+    handler.updateCommand();
+    console.log(handler.command, handler.user);
+    for (let i = 0; i < repeat; i++) {
+      kommunicatResponse(handler.command, handler.user);
     }
-
-    let msg = holder.innerHTML;
-
-    if (user) {
-      msg += `<br><br>Players:${user.name} `;
-    } else {
-      msg += "<br><br>Open Round";
-    }
-    return msg;
+    handler.response = "Done!";
+    handler.command = "";
+    return;
   }
+  handler.response = `I don't know what you mean by ${handler.firstWd()}<br><br>
+  After do or execute, specify the number of times I should execute a command followed by that command!`;
+  handler.command = "";
 }
 
-const variables = { pi: 3.141592653, e: 2.71828182845 };
+function dice(handler) {
+  handler.updateCommand();
+  if (handler.firstWd() == "") {
+    handler.response = Math.ceil(Math.random() * 6);
+    return;
+  }
+  if (parseFloat(handler.firstWd()) + "" === handler.firstWd()) {
+    handler.response = Math.ceil(Math.random() * parseFloat(handler.firstWd()));
+    handler.updateCommand();
+    return;
+  }
+  handler.response = `I don't know what you mean by '${handler.firstWd()}'<br>After dice, you can enter a number to specify what dice I should roll`;
+  handler.command = "";
+}
 
-const chessGame = [];
+// ----
 
-// -----
-
-addMessage(
-  "Dieser Bereich wird künftig der offizielle Chatroom der IVP",
-  botSignature
-);
-addMessage(
-  "Er befindet sich derzeit noch in der Entwicklungs- und Testphase",
-  botSignature
-);
+addMessage("Dieser Bereich wird künftig der offizielle Chatroom der IVP", {
+  name: "!Kommunicat",
+  pos: "bot",
+});
+addMessage("Er befindet sich derzeit noch in der Entwicklungs- und Testphase", {
+  name: "!Kommunicat",
+  pos: "bot",
+});

@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="./css/kommunicatStyle.css">
     <script src="./scripts/kommunicatScript.js" defer></script>
     <script src="./scripts/kommunicatBot.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
     <section id="history"></section>
     <form id="input">
-        <div style="display: flex; flex-flow: column;">
+        <!-- <div id="userInput" style="display: flex; flex-flow: column;">
+            <button id="showOpts">Show User Options</button>
             <div>
                 <input type="radio" name="pos" id="Anonym" checked>
                 <label for="Anonym">Anonym</label>
@@ -36,10 +38,24 @@
                 <label for="Self">Self</label>
             </div>
             <input type="text" id="customUserName" placeholder="Username . . .">
+        </div> -->
+
+        <div id="userInput" style="display: flex; flex-flow: column;">
+            <select name="user" id="selUser">
+                <option value="false">Anonym</option>
+                <option value='{"name": "Carl", "pos": "user", "isSelf": false}'>Carl</option>
+                <option value='{"name": "Trudy", "pos": "user", "isSelf": true}'>Trudy</option>
+                <option value='{"name": "Lucas", "pos": "IVPmember", "isSelf": false}'>Lucas</option>
+                <option value='{"name": "Interkommunale Volkspartei", "pos": "IVP", "isSelf": false}'>IVP</option>
+            </select>
         </div>
 
         <div id="textIn" role="textbox" contenteditable="true"></div>
-        <button type="submit">Senden</button>
+        <button type="submit" id="sendMessage">
+            <span class="material-icons">
+                send
+            </span>
+        </button>
     </form>
 </body>
 
